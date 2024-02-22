@@ -84,4 +84,4 @@ func update_animations(input_axis):
 
 
 func _on_hazard_detector_area_entered(area):
-	queue_free()
+	global_position = starting_position
