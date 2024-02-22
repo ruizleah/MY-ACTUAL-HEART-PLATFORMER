@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7ssnkt4brfcg"]
+[gd_scene load_steps=4 format=3 uid="uid://c26le2cjn3wnc"]
 
-[ext_resource type="Texture2D" uid="uid://bynkd4lxs6sja" path="res://heart.png" id="1_esop4"]
-[ext_resource type="Script" path="res://heart.gd" id="1_mh5kn"]
+[ext_resource type="Texture2D" uid="uid://ckh4iv37dyga2" path="res://heart.png" id="1_2t1g4"]
+[ext_resource type="Script" path="res://heart.gd" id="1_qaq6n"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w2mdw"]
-radius = 5.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_egkbq"]
+radius = 24.0208
 
 [node name="Heart" type="Area2D" groups=["Hearts"]]
+scale = Vector2(0.25, 0.25)
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_mh5kn")
+script = ExtResource("1_qaq6n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_esop4")
+texture = ExtResource("1_2t1g4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_w2mdw")
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_egkbq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
