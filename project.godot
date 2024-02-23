@@ -10,9 +10,16 @@ config_version=5
 
 [application]
 
+<<<<<<< Updated upstream
 config/name="our actual heart platformer"
 run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<Updatedupstreamconfig/name="heartplatformerathome"
 <<<<<<<HEADrun/main_scene="res://level_one.tscn"
+=======
+config/name="My-actual-heart-platformer"
+run/main_scene="res://world.tscn"
+config/features=PackedStringArray("4.2", "Forward Plus")
+config/icon="res://icon.svg"
+>>>>>>> Stashed changes
