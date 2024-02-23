@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://by7uwubyd01vx"]
+
+[ext_resource type="PackedScene" uid="uid://nqcsk3ojpwro" path="res://world.tscn" id="1_yfovr"]
+[ext_resource type="Texture2D" uid="uid://73lfrscsbyj6" path="res://spikes.png" id="2_fq2br"]
+[ext_resource type="PackedScene" uid="uid://c26le2cjn3wnc" path="res://heart.tscn" id="3_py2v7"]
+
+[node name="LevelTwo" instance=ExtResource("1_yfovr")]
+
+[node name="Player" parent="." index="0"]
+position = Vector2(24, 40)
+
+[node name="LevelTileMap" parent="." index="2"]
+layer_0/tile_data = PackedInt32Array(65535, 196608, 3, 65536, 196608, 0, 131072, 196608, 1, 196608, 262144, 2, 196609, 131072, 0, 262145, 131072, 1, 262144, 0, 1, 327680, 0, 2, 327681, 327680, 3, 327682, 524288, 3, 327683, 524288, 3, 327684, 393216, 3, 262148, 0, 0, 262149, 393216, 2, 196613, 0, 1, 196614, 131072, 1, 262150, 131072, 1, 327685, 65536, 2, 327686, 327680, 3, 327687, 524288, 3, 327688, 524288, 3, 196618, 262144, 3, 196619, 524288, 3, 196620, 458752, 3, 327693, 524288, 3, 327694, 524288, 3, 327695, 524288, 3, 327696, 524288, 3, 327697, 458752, 3, 262161, 262144, 1, 196625, 0, 1, 131089, 0, 1, 65553, 393216, 1, 65552, 0, 2, 16, 0, 0, 17, 65536, 0, 18, 131072, 0, 65554, 131072, 1, 131090, 131072, 1, 196626, 131072, 1, 262162, 131072, 2, 65549, 196608, 3, 65550, 458752, 3, 327689, 524288, 3, 327690, 524288, 3, 327691, 524288, 3, 327692, 524288, 3, 131078, 131072, 0, 131077, 0, 0, 7, 262144, 3, 8, 524288, 3, 9, 458752, 3)
+
+[node name="Spikes" type="Sprite2D" parent="." index="3"]
+position = Vector2(40, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes2" type="Sprite2D" parent="." index="4"]
+position = Vector2(56, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes3" type="Sprite2D" parent="." index="5"]
+position = Vector2(120, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes4" type="Sprite2D" parent="." index="6"]
+position = Vector2(136, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes5" type="Sprite2D" parent="." index="7"]
+position = Vector2(152, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes6" type="Sprite2D" parent="." index="8"]
+position = Vector2(168, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes7" type="Sprite2D" parent="." index="9"]
+position = Vector2(216, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes8" type="Sprite2D" parent="." index="10"]
+position = Vector2(184, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes9" type="Sprite2D" parent="." index="11"]
+position = Vector2(200, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes10" type="Sprite2D" parent="." index="12"]
+position = Vector2(232, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes11" type="Sprite2D" parent="." index="13"]
+position = Vector2(248, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Spikes12" type="Sprite2D" parent="." index="14"]
+position = Vector2(264, 72)
+texture = ExtResource("2_fq2br")
+
+[node name="Heart" parent="." index="15" instance=ExtResource("3_py2v7")]
+position = Vector2(24, 40)
+
+[node name="Heart2" parent="." index="16" instance=ExtResource("3_py2v7")]
+position = Vector2(72, 56)
+
+[node name="Heart3" parent="." index="17" instance=ExtResource("3_py2v7")]
+position = Vector2(96, 24)
+
+[node name="Heart4" parent="." index="18" instance=ExtResource("3_py2v7")]
+position = Vector2(136, -8)
+
+[node name="Heart5" parent="." index="19" instance=ExtResource("3_py2v7")]
+position = Vector2(184, 40)
+
+[node name="Heart6" parent="." index="20" instance=ExtResource("3_py2v7")]
+position = Vector2(224, 8)
+
+[node name="Heart7" parent="." index="21" instance=ExtResource("3_py2v7")]
+position = Vector2(280, -16)
