@@ -1,14 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccragu7asw1nl"]
+[gd_scene load_steps=6 format=3 uid="uid://ccragu7asw1nl"]
+
+[ext_resource type="Script" path="res://level_transition.gd" id="1_82gvq"]
+
+[sub_resource type="Animation" id="Animation_c412o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0392157, 0.0392157, 0.0392157, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_os0c1"]
+resource_name = "fade_from_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0392157, 0.0392157, 0.0392157, 1), Color(0.0392157, 0.0392157, 0.0392157, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_bwo3w"]
 resource_name = "fade_to_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0392157, 0.0392157, 0.0392157, 0), Color(0.0392157, 0.0392157, 0.0392157, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1d7e5"]
 _data = {
+"RESET": SubResource("Animation_c412o"),
+"fade_from_black": SubResource("Animation_os0c1"),
 "fade_to_black": SubResource("Animation_bwo3w")
 }
 
 [node name="LevelTransition" type="Node"]
+process_mode = 3
+script = ExtResource("1_82gvq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -21,4 +71,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+mouse_filter = 2
+color = Color(0.0392157, 0.0392157, 0.0392157, 0)

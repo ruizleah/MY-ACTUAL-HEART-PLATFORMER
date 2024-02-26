@@ -89,6 +89,7 @@ position = Vector2(1, -10)
 collision_layer = 2
 floor_stop_on_slope = false
 floor_snap_length = 3.0
+safe_margin = 0.15
 script = ExtResource("1_ahg2t")
 movement_data = ExtResource("2_piax5")
 
@@ -108,8 +109,6 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2.08165e-12, -32)
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
 
 [node name="HazardDetector" type="Area2D" parent="."]
 collision_layer = 0
